@@ -1,9 +1,16 @@
+import fonctions as f
 
 while True:
 	try:
-		nombre = float(input("Entrez un nombre : "))
-		carre = nombre ** 2
-		print(f"Le carré de {nombre} est {carre}")
+		a = int(input("La base : "))
+		b = int(input("L'exposant : "))
+        
+		resultat = f.puissance(a, b)
+		print(f"{a} élevé à la puissance {b} est {resultat}")
+
 	except KeyboardInterrupt:
 		print("\nÀ bientôt !")
 		break
+
+	except TypeError as e:
+		print(f"Erreur : {e}")
