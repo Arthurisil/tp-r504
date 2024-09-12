@@ -5,7 +5,7 @@ while True:
 		a = int(input("La base : "))
 		b = int(input("L'exposant : "))
         
-		resultat = f.puissance(a, b)
+		resultat = f.puiss(a, b)
 		print(f"{a} élevé à la puissance {b} est {resultat}")
 
 	except KeyboardInterrupt:
