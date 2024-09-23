@@ -1,6 +1,6 @@
 CREATE DATABASE demosql;
-USE demossql;
+USE demosql;
 CREATE TABLE myTable (id int AUTO_INCREMENT, name varchar(45) NOT NULL, PRIMARY KEY(id));
-INSERT INTO myTable (id, name) VALUES (NULL, 'Arthur');
-INSERT INTO myTable (id, name) VALUES (NULL, 'Clement');
-INSERT INTO myTable (id, name) VALUES (NULL, 'Matheo');
+INSERT INTO myTable (id, name) VALUES (NULL, 'arthur');
+INSERT INTO myTable (id, name) VALUES (NULL, 'clement');
+INSERT INTO myTable (id, name) VALUES (NULL, 'matheo');
