@@ -1,3 +1,5 @@
+MOUNT_PATH="/home/cimpoart/tp-r504/TP4/srv"
+
 # lancement serveur sql
 docker run --rm -d \
 	-p 3307:3306 \
@@ -5,4 +7,5 @@ docker run --rm -d \
 	--name tp4-sql \
 	--env MYSQL_ROOT_PASSWORD=foo \
 	--network net-tp4 \
+	--mount type=bind,source="$MOUNT_PATH",target=/srv \
 	mysql:8.0

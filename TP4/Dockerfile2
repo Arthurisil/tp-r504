@@ -1,0 +1,23 @@
+# Utilisez Python comme base
+FROM python:3.11
+# Met à jour les listes de paquets et installe les mises à jour
+RUN apt-get update && apt-get upgrade -y
+
+# Installe les paquets requis
+RUN apt-get install -y build-essential 
+RUN apt-get install -y pkg-config
+RUN apt-get install -y python3-pip
+RUN apt-get install -y default-libmysqlclient-dev
+# Met à jour pip
+RUN pip3 install --upgrade pip
+
+# Installe les paquets Python
+RUN pip3 install flask-mysqldb mysql-connector-python
+
+# Crée le répertoire et copie les fichiers
+COPY index.html /srv/templates/
+COPY app_1.py /srv/
+
+# Commande pour lancer l'application Flask
+CMD ["flask", "--app", "/srv/app_1", "run", "--host=0.0.0.0"]
+
